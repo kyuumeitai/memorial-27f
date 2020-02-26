@@ -1,0 +1,7 @@
+{
+  "name": "terremoto",
+  "restart": "no",
+  "domain": "27f.featured.ltnext.com",
+  "compress": true,
+  "letsencrypt": true
+}
