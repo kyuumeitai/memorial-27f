@@ -38,7 +38,7 @@ return (
           socialConfig={{
             twitterHandle: 'latercera',
             config: {
-              url: `https://interactivo.latercera.com/27f/${slug}/`,
+              url: `https://interactivo.latercera.com/memorial-27f/${slug}/`,
               title: `${title} - Interactivos La Tercera - Presentado por Nike`,
             }
           }}
@@ -52,7 +52,7 @@ return (
               socialConfig={{
                 twitterHandle: 'latercera',
                 config: {
-                  url: `https://interactivo.latercera.com/27f/${slug}/`,
+                  url: `https://interactivo.latercera.com/memorial-27f/${slug}/`,
                   title: `${title}`,
                   // hashtags: ['18D']
                 }

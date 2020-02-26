@@ -44,7 +44,7 @@ const ACFmp4video = ({ block, slug='', title='' }) => {
           socialConfig={{
             twitterHandle: 'latercera',
             config: {
-              url: `https://interactivo.latercera.com/27f/${slug}/`,
+              url: `https://interactivo.latercera.com/memorial-27f/${slug}/`,
               title: `${striphtml(title)}`,
               // hashtags: ['18D']
             }

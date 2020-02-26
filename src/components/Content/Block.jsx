@@ -68,7 +68,7 @@ const Block = ({ to, videosrc, imgurl, bajada, imgopacity, ...rest }) => {
                   socialConfig={{
                     twitterHandle: 'latercera',
                     config: {
-                      url: `https://interactivo.latercera.com/27f/${to}/`,
+                      url: `https://interactivo.latercera.com/memorial-27f/${to}/`,
                       title: `${rest.title} - Interactivos La Tercera - Presentado por Nike`,
                     }
                   }}

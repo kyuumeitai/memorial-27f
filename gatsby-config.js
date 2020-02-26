@@ -1,27 +1,18 @@
 module.exports = {
   siteMetadata: {
-    title: `27F`,
+    title: `Memorial 27F`,
     description: `A 10 años del terremoto y tsunami que marcaron la pasada década en Chile.`,
     siteName: 'Interactivos La Tercera',
     author: `@latercera`,
     twitterHandle: `latercera`,
-    url: 'https://interactivo.latercera.com/27f',
+    url: 'https://interactivo.latercera.com/memorial-27f',
     shareimg: `src/images/share.jpg`,
     domain: `https://interactivo.latercera.com`,
     fbappid: `1134891773353659`,
     hashtags: [`#27F`]
   },
-  pathPrefix: `/27f`,
+  pathPrefix: `/memorial-27f`,
   plugins: [
-    {
-      resolve: `@labcon/gatsby-plugin-copesa-remote-images`,
-      options: {
-        nodeType: 'wordpress__POST',
-        categoryid: 81,
-        extractImageFromPathString: 'content',
-        loopPathArray: ['attached_contentimages', 'attached_images_in_acf', 'attached_mainimg', 'attached_audios', 'attached_subtitles_in_acf'],
-      },
-    },
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
@@ -44,17 +35,6 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
-      options: {
-        fonts: [
-          {
-            family: `IBM Plex Sans`,
-            variants: [`400`, `800`]
-          },
-        ]
-      }
-    },
-    {
       resolve: `gatsby-plugin-lodash`,
       options: {
         disabledFeatures: [`shorthands`, `cloning`],
@@ -73,32 +53,6 @@ module.exports = {
         display: `minimal-ui`,
         icon: `src/images/icon-lt.png`
       },
-    },
-    {
-    resolve: 'gatsby-source-wordpress',
-      options: {
-        baseUrl: 'legacy.ltnext.com',
-        protocol: 'https',
-        hostingWPCOM: false,
-        useACF: true,
-        acfOptionPageIds: [],
-        verboseOutput: true,
-        perPage: 100,
-        concurrentRequests: 20,
-        includedRoutes: ['**/posts', '**/tags'],
-        normalizer: function ({ entities }) {
-          return entities.filter(e => {
-            if (e.__type === `wordpress__POST`) {
-              if (e.categories.includes(81) ){  //sólo permite posts de la categoría actual
-                return e
-              }
-            }
-            else {
-              return e
-            }
-          })
-        }
-      }
     },
     `gatsby-plugin-no-sourcemaps`
 
