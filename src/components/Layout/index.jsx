@@ -41,7 +41,7 @@ const Layout = ({ sponsorLogo, children }) => {
           render={data => (
             <StLayout className={theme.phase}>
               <GlobalStyle />
-              <ProgressBar height={2} color='tomato' />
+              <ProgressBar height={2} color='white' />
               <Header title={data.site.siteMetadata.title} sponsorLogo={sponsorLogo} isOn={value} handleToggle={() => {
                 try {
                   trackCustomEvent({
