@@ -3,6 +3,7 @@ import Layout from '@/components/Layout'
 import Seo from '@/components/Seo'
 import HeroMemorial from '@/components/HeroMemorial'
 import Credits from '@/components/Credits'
+import GlifoIframe from '@/components/GlifoIframe'
 
 class IndexPage extends React.Component {
   render() {
@@ -11,7 +12,7 @@ class IndexPage extends React.Component {
       <Layout>
         <Seo />
         <HeroMemorial />
-
+        <GlifoIframe />
         <Credits />
       </Layout>
     )

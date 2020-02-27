@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Memorial Digital 27F</title>
+  <script src='https://d3js.org/d3.v5.min.js' charset='utf-8'></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="filter-buttons">
+    <button class="button" id="nameButton">Nombre</button>
+    <button class="button" id="ageButton">Edad</button>
+    <button class="button" id="genderButton">Género</button>
+    <button class="button" id="causeButton">Causa</button>
+    <button class="button" id="cityButton">Comuna</button>
+    <button class="button" id="regionButton">Región</button>
+
+  </div>
+
+  <div id="idiom-and-caption">
+    <div id="idiom"></div>
+    <div id="caption"></div>
+  </div>
+
+  <div id="matrix"></div>
+
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div id="modal-top-content">
+        <div id="modal-header-container">
+          <div>
+            <h2 id="name"></h1>
+          </div>
+          <div>
+            <h4 id="ageAndRegion"></h1>
+          </div>
+          <div>
+            <h4 id="city"></h1>
+          </div>
+          <div>
+            <h3 id="deathCause"></h1>
+          </div>
+          <a id="readMoreLink" href="">LEER MÁS</a>
+          <!-- <p>Some text in the Modal..</p> -->
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src='main.js'></script>
+</body>
+</html>
