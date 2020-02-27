@@ -1,6 +1,26 @@
 const path = require(`path`)
 const slash = require(`slash`)
 
+const dasherize = str => {
+  const map = {
+    '-': ' ',
+    a: 'á|à|ã|â|À|Á|Ã|Â',
+    e: 'é|è|ê|É|È|Ê',
+    i: 'í|ì|î|Í|Ì|Î',
+    o: 'ó|ò|ô|õ|Ó|Ò|Ô|Õ',
+    u: 'ú|ù|û|ü|Ú|Ù|Û|Ü',
+    c: 'ç|Ç',
+    n: 'ñ|Ñ',
+  }
+
+  let strlow = str.trim().toLowerCase()
+
+  for (let pattern in map) {
+    strlow = strlow.replace(new RegExp(map[pattern], 'g'), pattern)
+  }
+  return strlow
+}
+
 exports.onCreateWebpackConfig = ({ getConfig, stage, actions }) => {
   const config = getConfig()
   if (stage.startsWith('develop') && config.resolve) {
@@ -21,15 +41,12 @@ exports.onCreateWebpackConfig = ({ getConfig, stage, actions }) => {
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
   const result = await graphql(`
-    query  {
-      allWordpressPost{
-        edges {
-          node {
-            id
-            slug
-            title
-            excerpt
-          }
+    query {
+      allGoogleSheetTestimoniosRow  {
+        nodes {
+          apellidos
+          nombres
+          id
         }
       }
     }
@@ -39,16 +56,16 @@ exports.createPages = async ({ graphql, actions }) => {
     throw new Error(result.errors)
   }
 
-  const { allWordpressPost } = result.data
+  const { allGoogleSheetTestimoniosRow } = result.data
+  console.log('>>>query', allGoogleSheetTestimoniosRow)
+  const victimTemplate = path.resolve(`./src/templates/victim.js`)
 
-  const postTemplate = path.resolve(`./src/templates/post.js`)
-
-  allWordpressPost.edges.forEach(edge => {
+  allGoogleSheetTestimoniosRow.nodes.forEach(victim => {
     createPage({
-      path: `/${edge.node.slug}/`,
-      component: slash(postTemplate),
+      path: `/${dasherize(victim.nombres)}-${dasherize(victim.apellidos)}/`,
+      component: slash(victimTemplate),
       context: {
-        id: edge.node.id,
+        id: victim.id,
       }
     })
   })

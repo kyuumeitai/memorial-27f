@@ -5,7 +5,7 @@ import theme from '../../styles/theme';
 const StCredits = styled.div`
   text-align: center;
   padding: 1rem;
-  background-color: tomato;
+  background-color: gray;
   color: ${theme.color};
   .creditsWrapper{
     max-width: ${theme.normalWidth};

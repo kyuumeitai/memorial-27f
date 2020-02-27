@@ -5,7 +5,7 @@ module.exports = {
     siteName: 'Interactivos La Tercera',
     author: `@latercera`,
     twitterHandle: `latercera`,
-    url: 'https://interactivo.latercera.com/memorial-27f',
+    url: 'https://interactivo.latercera.com/memorial-27f/',
     shareimg: `src/images/share.jpg`,
     domain: `https://interactivo.latercera.com`,
     fbappid: `1134891773353659`,
@@ -13,6 +13,14 @@ module.exports = {
   },
   pathPrefix: `/memorial-27f`,
   plugins: [
+    {
+      resolve: 'gatsby-source-google-sheets',
+      options: {
+        spreadsheetId: '1JqbfRc1CU7tEyKAmX7k6q9X4N2TCrzjpfP0jHHsni8I',
+        worksheetTitle: 'Testimonios',
+        credentials: require('./client_secret.json')
+      }
+    },
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {

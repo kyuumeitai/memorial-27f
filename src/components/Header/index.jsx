@@ -8,33 +8,13 @@ import MobileNav from './MobileNav'
 import Switch from '@/components/Switch'
 
 const Header = ({ sponsorLogo, isOn, handleToggle }) => {
-	const { posts } = useStaticQuery(
-		graphql`
-      query menuposts {
-        posts: allWordpressPost {
-          edges {
-            node {
-              title
-              slug
-            }
-          }
-        }
-      }
-    `
-	)
-
-	const newPosts = [...posts.edges]
-
-	const bla = newPosts.map((post) => {
-		return (
-			post.node
-		)
-	})
-
-	const res = [...bla]
-
+	const res = [
+		{
+			slug: '/public',
+			title: 'test'
+		}
+	]
 	const [menu, updateMenu] = useState(false)
-
 	return (
 		<>
 			<Container>
@@ -57,7 +37,7 @@ const Header = ({ sponsorLogo, isOn, handleToggle }) => {
 					</Link>
 				</div>
 				<div className="col">
-					<Switch isOn={isOn} handleToggle={handleToggle} />
+					{/* <Switch isOn={isOn} handleToggle={handleToggle} /> */}
 				</div>
 			</Container>
 			<MobileNav posts={res} active={menu} handleToggleMenu={(val) => updateMenu(val)}  />

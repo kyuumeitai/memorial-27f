@@ -1,10 +1,8 @@
 import React from 'react'
 import Layout from '@/components/Layout'
 import Seo from '@/components/Seo'
-import PostsBlocks from '@/components/EarthquakePostsBlocks'
-import HeroTerremoto from '@/components/HeroTerremoto'
+import HeroMemorial from '@/components/HeroMemorial'
 import Credits from '@/components/Credits'
-import Sismografo from '@/components/Sismografo'
 
 class IndexPage extends React.Component {
   render() {
@@ -12,9 +10,8 @@ class IndexPage extends React.Component {
     return (
       <Layout>
         <Seo />
-        <HeroTerremoto />
-        <Sismografo />
-        <PostsBlocks />
+        <HeroMemorial />
+
         <Credits />
       </Layout>
     )

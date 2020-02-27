@@ -10,10 +10,10 @@
 // })
 
 export default {
-  background: 'white',
-  accent: 'black',
-  color: 'black',
-  complementary: 'black',
+  background: 'black',
+  accent: 'white',
+  color: 'white',
+  complementary: 'white',
   clearcolor: 'white',
   darkcolor: 'black',
   fontBody: '"Acta Book", Times New Roman, sans-serif',

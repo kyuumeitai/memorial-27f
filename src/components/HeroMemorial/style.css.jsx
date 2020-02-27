@@ -2,13 +2,22 @@ import styled from 'styled-components'
 import theme from '@/styles/theme'
 // import bgpaper from '@/images/papel.png'
 
-const StHeroTerremoto = styled.div`
+const StHeroMemorial = styled.div`
   padding-top: ${theme.headerHeight};
   min-height: 80vh;
   position: relative;
   z-index: 0;
   overflow: hidden;
   background-color: black;
+  .title{
+    display: block;
+    max-width: ${theme.normalWidth};
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    text-align: center;
+  }
   @media(max-width: 800px){
     min-height: 60vh;
   }
@@ -66,4 +75,4 @@ const Bg = styled.div`
   }
 `
 
-export { StHeroTerremoto, Content, Text, Bg}
+export { StHeroMemorial, Content, Text, Bg}
