@@ -33,6 +33,13 @@ const Content = styled.div`
   img{
     max-height: 80vh;
   }
+
+  .imginstr{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem;
+  }
 `
 
 const Text = styled.div`

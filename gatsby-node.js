@@ -30,6 +30,19 @@ exports.onCreateWebpackConfig = ({ getConfig, stage, actions }) => {
     }
   }
   actions.setWebpackConfig({
+    module: {
+      rules: [
+        {
+          test: /\.(txt|csv)$/,
+          use: [
+            {
+              loader: 'file-loader',
+              options: {}
+            }
+          ]
+        }
+      ]
+    },
     resolve: {
       alias: {
         '@': path.resolve(__dirname, "src"),
