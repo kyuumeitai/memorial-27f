@@ -172,7 +172,7 @@ d3.csv('27F-vis.csv').then(datum => {
     .attr('opacity', .5)
     .attr('class', 'glyph')
     .attr('cursor', 'pointer')
-    .attr('xlink:href', '../assets/crux2.png')
+    .attr('xlink:href', 'assets/crux2.png')
     .attr('width', 100)
     .attr('height', 100)
     .attr('x', d => (d.matrixId % cols * 100))
