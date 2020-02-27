@@ -4,27 +4,14 @@ import PropTypes from "prop-types"
 import get from 'lodash/get'
 import Layout from "../components/Layout"
 import Seo from "../components/Seo"
+import Profile from "@/components/Profile"
 
 const VictimPage = ({data}) => {
   const { googleSheetTestimoniosRow } = data
-  const { nombres, apellidos, edad, comuna, causadefallecimiento, region, testimonio, nombredelfamiliar } = googleSheetTestimoniosRow
   return (
     <Layout>
       <Seo/>
-      <h2>{nombres} {apellidos}</h2>
-      <h3>{edad}</h3>
-      <h3>{comuna}, {region}</h3>
-      <h3>{causadefallecimiento}</h3>
-      {testimonio && (
-        <>
-          <p>{testimonio}</p>
-          {
-            nombredelfamiliar && (
-              <p>{nombredelfamiliar}</p>
-            )
-          }
-        </>
-      )}
+      <Profile person={googleSheetTestimoniosRow} />
     </Layout>
   )
 }

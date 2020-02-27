@@ -1,8 +1,7 @@
 import styled from 'styled-components'
 import theme from '@/styles/theme'
-import {Link} from 'gatsby'
 
-const StListado = styled.div`
+const StProfile = styled.div`
   display: block;
   margin-top: ${theme.headerHeight};
   max-width: ${theme.normalWidth};
@@ -13,16 +12,9 @@ const StListado = styled.div`
   h2{
     margin: ${theme.headerHeight} 0;
   }
-`
-
-const StLink = styled(Link)`
-  display: block;
-  padding: 0.3rem;
-  transition: all .3s ease;
-  &:hover{
-    background-color: ${theme.color};
-    color: ${theme.background};
+  h3{
+    margin: ${theme.headerHeight} 0;
   }
 `
 
-export {StListado, StLink}
+export { StProfile }
