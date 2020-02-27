@@ -2,26 +2,37 @@
 import styled from 'styled-components';
 import theme from '../../styles/theme';
 
-const StPFooter = styled.div`
+
+const MtPFooter = styled.div`
   text-align: center;
   padding: ${theme.verticalSpacing} 1rem;
   background-color: ${theme.color};
   color: ${theme.background};
+  /* font-family: 'Courier New', Courier, monospace; */
+  
+  width: 100vw;
+  
+  p {
+    max-width: 50vw;
+    margin: 0 auto;
+    font-family: "Axiforma",sans-serif;
+    font-weight: bold;
+    @media(max-width: 800px){
+      max-width: 80vw;
+		}
+
+
+  }
   h2{
     line-height: 1;
-    font-family: 'Acta Display', sans-serif;
-    margin-bottom: 10px;
-  }
-  p {
-    font-size: 0.9rem;
-    max-width: 80vw;
-    margin: 0 auto;
+    /* font-family: 'Acta Display', sans-serif; */
   }
   &:hover{
     >a{
       button{
         background-color: ${theme.color};
         color: ${theme.background};
+        cursor:pointer;
       }
     }
   }
@@ -56,5 +67,5 @@ const StPFooter = styled.div`
   }
 `
 
-export {StPFooter}
+export {MtPFooter}
 

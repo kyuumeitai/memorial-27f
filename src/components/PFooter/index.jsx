@@ -5,7 +5,7 @@ import {
 	StPFooter
 } from './style.css'
 
-const PFooter = () => (
+const MFooter = () => (
   <StPFooter>
     <a href="https://interactivo.latercera.com/suscripcion/?utm_medium=especialeslt&utm_source=masqueundiario&utm_content=footer&" target="_blank" rel="noopener noreferrer">
       <h2>Más que un diario</h2>
@@ -15,5 +15,5 @@ const PFooter = () => (
   </StPFooter>
 )
 
-export default PFooter
+export default MFooter
 
