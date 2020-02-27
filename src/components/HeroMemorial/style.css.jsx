@@ -48,6 +48,10 @@ const Text = styled.div`
   p{
     font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  a{
+    text-decoration: underline;
   }
 `
 

@@ -6,7 +6,6 @@ import Layout from "../components/Layout"
 import Seo from "../components/Seo"
 
 const VictimPage = ({data}) => {
-  // console.log('>>>VictimPage data:', data)
   const { googleSheetTestimoniosRow } = data
   const { nombres, apellidos, edad, comuna, causadefallecimiento, region, testimonio, nombredelfamiliar } = googleSheetTestimoniosRow
   return (
