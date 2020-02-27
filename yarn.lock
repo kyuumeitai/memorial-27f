@@ -2319,7 +2319,7 @@ babel-preset-gatsby@^0.2.29:
     babel-plugin-transform-react-remove-prop-types "^0.4.24"
     gatsby-core-utils "^1.0.28"
 
-babel-runtime@^6.26.0:
+babel-runtime@^6.26.0, babel-runtime@^6.5.0:
   version "6.26.0"
   resolved "https://registry.yarnpkg.com/babel-runtime/-/babel-runtime-6.26.0.tgz#965c7058668e82b55d7bfe04ff2337bc8b5647fe"
   integrity sha1-llxwWGaOgrVde/4E/yM3vItWR/4=
@@ -7114,6 +7114,11 @@ iferr@^0.1.5:
   resolved "https://registry.yarnpkg.com/iferr/-/iferr-0.1.5.tgz#c60eed69e6d8fdb6b3104a1fcbca1c192dc5b501"
   integrity sha1-xg7taebY/bazEEofy8ocGS3FtQE=
 
+iframe-resizer@^4.2.10:
+  version "4.2.10"
+  resolved "https://registry.yarnpkg.com/iframe-resizer/-/iframe-resizer-4.2.10.tgz#c61c9119bb1bf31931fc3c3bb025e1891b18502c"
+  integrity sha512-9T/AWavGI5Q7nw2ch7qatkKvhK6S11eatuSh0SXpPXN3MV0HtN97KyifWJSuMj47rD6jbqe1CXT91PLQbexvEQ==
+
 ignore@^3.3.5:
   version "3.3.10"
   resolved "https://registry.yarnpkg.com/ignore/-/ignore-3.3.10.tgz#0a97fb876986e8081c631160f8f9f389157f0043"
@@ -10880,6 +10885,13 @@ react-html-parser@^2.0.2:
   integrity sha512-XeerLwCVjTs3njZcgCOeDUqLgNIt/t+6Jgi5/qPsO/krUWl76kWKXMeVs2LhY2gwM6X378DkhLjur0zUQdpz0g==
   dependencies:
     htmlparser2 "^3.9.0"
+
+react-iframe-resizer-super@^0.2.2:
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/react-iframe-resizer-super/-/react-iframe-resizer-super-0.2.2.tgz#6838b52f1bdc85f004b71090aaca7fde8f26da1d"
+  integrity sha512-iWPEkYsNjQYi7ZEy1IBoJUIjTV47De8RhSbxxtAP2YUcYEArS6GKxIAAyl2gexM65ahXW9+NUP6hPFIxO0Du8A==
+  dependencies:
+    babel-runtime "^6.5.0"
 
 react-is@^16.6.3, react-is@^16.7.0, react-is@^16.8.1:
   version "16.12.0"

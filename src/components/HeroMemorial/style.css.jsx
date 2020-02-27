@@ -39,6 +39,7 @@ const Content = styled.div`
     margin-left: auto;
     margin-right: auto;
     padding: 1rem;
+    max-width: ${theme.normalWidth};
   }
 `
 
